@@ -64,8 +64,6 @@ public class ItemMudAxe extends ElementsTheGameofNoobs.ModElement {
 				int z = (int) entity.posZ;
 				{
 					java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
-					$_dependencies.put("entity", entity);
-					$_dependencies.put("world", world);
 					ProcedureMudAxeOnPlayerStoppedUsing.executeProcedure($_dependencies);
 				}
 			}
