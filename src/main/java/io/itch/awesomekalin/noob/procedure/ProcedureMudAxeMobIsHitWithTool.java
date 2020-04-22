@@ -1,9 +1,12 @@
 package io.itch.awesomekalin.noob.procedure;
 
 import net.minecraft.world.World;
+import net.minecraft.util.text.TextComponentString;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.server.MinecraftServer;
+import net.minecraft.item.ItemStack;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.Entity;
 import net.minecraft.command.ICommandSender;
 
@@ -20,16 +23,8 @@ public class ProcedureMudAxeMobIsHitWithTool extends ElementsTheGameofNoobs.ModE
 			System.err.println("Failed to load dependency entity for procedure MudAxeMobIsHitWithTool!");
 			return;
 		}
-		if (dependencies.get("x") == null) {
-			System.err.println("Failed to load dependency x for procedure MudAxeMobIsHitWithTool!");
-			return;
-		}
-		if (dependencies.get("y") == null) {
-			System.err.println("Failed to load dependency y for procedure MudAxeMobIsHitWithTool!");
-			return;
-		}
-		if (dependencies.get("z") == null) {
-			System.err.println("Failed to load dependency z for procedure MudAxeMobIsHitWithTool!");
+		if (dependencies.get("itemstack") == null) {
+			System.err.println("Failed to load dependency itemstack for procedure MudAxeMobIsHitWithTool!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
@@ -37,14 +32,15 @@ public class ProcedureMudAxeMobIsHitWithTool extends ElementsTheGameofNoobs.ModE
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
-		int x = (int) dependencies.get("x");
-		int y = (int) dependencies.get("y");
-		int z = (int) dependencies.get("z");
+		ItemStack itemstack = (ItemStack) dependencies.get("itemstack");
 		World world = (World) dependencies.get("world");
 		entity.setCustomNameTag("Noobed");
-		System.out.println("How DARE you fight my kind with me.");
-		if (!world.isRemote && world.getMinecraftServer() != null) {
-			world.getMinecraftServer().getCommandManager().executeCommand(new ICommandSender() {
+		if (entity instanceof EntityPlayer && !world.isRemote) {
+			((EntityPlayer) entity).sendStatusMessage(new TextComponentString("How DARE you fight my kind with me."), (true));
+		}
+		itemstack.setStackDisplayName("HOW DARE YOU!");
+		if (!entity.world.isRemote && entity.world.getMinecraftServer() != null) {
+			entity.world.getMinecraftServer().getCommandManager().executeCommand(new ICommandSender() {
 				@Override
 				public String getName() {
 					return "";
@@ -57,12 +53,12 @@ public class ProcedureMudAxeMobIsHitWithTool extends ElementsTheGameofNoobs.ModE
 
 				@Override
 				public World getEntityWorld() {
-					return world;
+					return entity.world;
 				}
 
 				@Override
 				public MinecraftServer getServer() {
-					return world.getMinecraftServer();
+					return entity.world.getMinecraftServer();
 				}
 
 				@Override
@@ -72,14 +68,19 @@ public class ProcedureMudAxeMobIsHitWithTool extends ElementsTheGameofNoobs.ModE
 
 				@Override
 				public BlockPos getPosition() {
-					return new BlockPos((int) x, (int) y, (int) z);
+					return entity.getPosition();
 				}
 
 				@Override
 				public Vec3d getPositionVector() {
-					return new Vec3d(x, y, z);
+					return new Vec3d(entity.posX, entity.posY, entity.posZ);
 				}
-			}, "summon lightning_bolt");
+
+				@Override
+				public Entity getCommandSenderEntity() {
+					return entity;
+				}
+			}, "effect @p poison 5 5");
 		}
 	}
 }
