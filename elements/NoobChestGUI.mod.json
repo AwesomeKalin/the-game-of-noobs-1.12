@@ -1,0 +1,49 @@
+{
+  "_fv": 6,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 352,
+    "height": 332,
+    "renderBgLayer": true,
+    "components": [
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 0,
+          "name": "Slot #0",
+          "x": 282,
+          "y": 126
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 1,
+          "name": "Slot #1",
+          "x": 513,
+          "y": 124
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Noob Chest",
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "name": "Noob Chest",
+          "x": 372,
+          "y": 77
+        }
+      }
+    ]
+  }
+}

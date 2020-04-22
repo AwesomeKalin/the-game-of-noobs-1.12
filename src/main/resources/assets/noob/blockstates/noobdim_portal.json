@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "axis=z": {
+      "model": "noob:noobdim_portal_ew"
+    },
+    "axis=x": {
+      "model": "noob:noobdim_portal_ns"
+    },
+    "inventory": {
+      "model": "noob:noobdim_portal_ns"
+    }
+  }
+}

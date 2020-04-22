@@ -1,0 +1,270 @@
+{
+  "id_map": {
+    "GUI": 1,
+    "DIMENSION": 1
+  },
+  "mod_elements": [
+    {
+      "name": "NoobChest",
+      "type": "block",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "NoobChestGUI",
+      "type": "gui",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {
+        "0": 1
+      }
+    },
+    {
+      "name": "NoobChestOnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "int"
+          },
+          {
+            "name": "y",
+            "type": "int"
+          },
+          {
+            "name": "z",
+            "type": "int"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "NoobTab",
+      "type": "tab",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "NoobBio",
+      "type": "biome",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "NoobDim",
+      "type": "dimension",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {
+        "1": 1
+      }
+    },
+    {
+      "name": "NoobChestRec",
+      "type": "recipe",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "NoobFoodFoodEaten",
+      "type": "procedure",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "int"
+          },
+          {
+            "name": "y",
+            "type": "int"
+          },
+          {
+            "name": "z",
+            "type": "int"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "NoobFood",
+      "type": "food",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "MudAxeMobIsHitWithTool",
+      "type": "procedure",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "int"
+          },
+          {
+            "name": "y",
+            "type": "int"
+          },
+          {
+            "name": "z",
+            "type": "int"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MudAxeOnPlayerStoppedUsing",
+      "type": "procedure",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MudAxe",
+      "type": "tool",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "MudSword",
+      "type": "tool",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "MudPickaxe",
+      "type": "tool",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "MudAxeRec",
+      "type": "recipe",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "MudSwordRec",
+      "type": "recipe",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "NoobIgniterRec",
+      "type": "recipe",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "MudPickaxeRec",
+      "type": "recipe",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [],
+  "language_map": {
+    "en_us": {
+      "item.mudpickaxe.name": "Mud Pickaxe",
+      "item.mudsword.name": "Mud Sword",
+      "itemGroup.tabnoobtab": "The Game of Noobs",
+      "item.noobdim.name": "Noob Igniter",
+      "item.mudaxe.name": "Mud Axe",
+      "item.noobfood.name": "Noob Food",
+      "tile.noobchest.name": "Noob Chest"
+    }
+  },
+  "workspaceSettings": {
+    "modid": "noob",
+    "modName": "The Game of Noobs",
+    "version": "1.1",
+    "description": "The mod for noobs. DO NOT USE IF YOU ARE A PRO",
+    "author": "AwesomeKalin55, AwesomeFootball 123",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "1.12.2",
+    "modElementsPackage": "io.itch.awesomekalin.noob",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202000214217
+}
