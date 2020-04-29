@@ -33,13 +33,13 @@ public class ItemMudPickaxe extends ElementsTheGameofNoobs.ModElement {
 
 	@Override
 	public void initElements() {
-		elements.items.add(() -> new ItemPickaxe(EnumHelper.addToolMaterial("MUDPICKAXE", 1, 10, 1f, -4f, 1)) {
+		elements.items.add(() -> new ItemPickaxe(EnumHelper.addToolMaterial("MUDPICKAXE", 0, 10, 0.1f, -4f, 1)) {
 			{
 				this.attackSpeed = -3f;
 			}
 			public Set<String> getToolClasses(ItemStack stack) {
 				HashMap<String, Integer> ret = new HashMap<String, Integer>();
-				ret.put("pickaxe", 1);
+				ret.put("pickaxe", 0);
 				return ret.keySet();
 			}
 
@@ -54,7 +54,6 @@ public class ItemMudPickaxe extends ElementsTheGameofNoobs.ModElement {
 					java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
 					$_dependencies.put("entity", entity);
 					$_dependencies.put("itemstack", itemstack);
-					$_dependencies.put("world", world);
 					ProcedureMudAxeMobIsHitWithTool.executeProcedure($_dependencies);
 				}
 				return true;
@@ -68,8 +67,7 @@ public class ItemMudPickaxe extends ElementsTheGameofNoobs.ModElement {
 				int z = (int) entity.posZ;
 				{
 					java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
-					$_dependencies.put("entity", entity);
-					$_dependencies.put("world", world);
+					$_dependencies.put("itemstack", itemstack);
 					ProcedureMudAxeOnPlayerStoppedUsing.executeProcedure($_dependencies);
 				}
 			}

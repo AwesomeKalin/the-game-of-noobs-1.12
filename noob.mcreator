@@ -1,7 +1,7 @@
 {
   "id_map": {
-    "GUI": 1,
-    "DIMENSION": 1
+    "DIMENSION": 1,
+    "GUI": 1
   },
   "mod_elements": [
     {
@@ -144,10 +144,6 @@
           {
             "name": "itemstack",
             "type": "itemstack"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       }
@@ -162,12 +158,8 @@
       "metadata": {
         "dependencies": [
           {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
+            "name": "itemstack",
+            "type": "itemstack"
           }
         ]
       }
@@ -233,13 +225,13 @@
   "sound_elements": [],
   "language_map": {
     "en_us": {
+      "itemGroup.tabnoobtab": "The Game of Noobs",
+      "tile.noobchest.name": "Noob Chest",
       "item.mudpickaxe.name": "Mud Pickaxe",
       "item.mudsword.name": "Mud Sword",
-      "itemGroup.tabnoobtab": "The Game of Noobs",
       "item.noobdim.name": "Noob Igniter",
       "item.mudaxe.name": "Mud Axe",
-      "item.noobfood.name": "Noob Food",
-      "tile.noobchest.name": "Noob Chest"
+      "item.noobfood.name": "Noob Food"
     }
   },
   "workspaceSettings": {

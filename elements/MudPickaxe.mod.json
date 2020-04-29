@@ -10,8 +10,8 @@
       "value": "CUSTOM:NoobTab"
     },
     "toolType": "Pickaxe",
-    "harvestLevel": 1,
-    "efficiency": 1.0,
+    "harvestLevel": 0,
+    "efficiency": 0.1,
     "attackSpeed": 1.0,
     "enchantability": 1,
     "damageVsEntity": 0.0,

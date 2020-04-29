@@ -47,10 +47,7 @@ public class ItemMudAxe extends ElementsTheGameofNoobs.ModElement {
 				{
 					java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
 					$_dependencies.put("entity", entity);
-					$_dependencies.put("x", x);
-					$_dependencies.put("y", y);
-					$_dependencies.put("z", z);
-					$_dependencies.put("world", world);
+					$_dependencies.put("itemstack", itemstack);
 					ProcedureMudAxeMobIsHitWithTool.executeProcedure($_dependencies);
 				}
 				return true;
@@ -64,6 +61,7 @@ public class ItemMudAxe extends ElementsTheGameofNoobs.ModElement {
 				int z = (int) entity.posZ;
 				{
 					java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
+					$_dependencies.put("itemstack", itemstack);
 					ProcedureMudAxeOnPlayerStoppedUsing.executeProcedure($_dependencies);
 				}
 			}

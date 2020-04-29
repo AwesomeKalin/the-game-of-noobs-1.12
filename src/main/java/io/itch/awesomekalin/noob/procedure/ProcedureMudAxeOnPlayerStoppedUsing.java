@@ -1,9 +1,6 @@
 package io.itch.awesomekalin.noob.procedure;
 
-import net.minecraft.world.World;
-import net.minecraft.util.text.TextComponentString;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.entity.Entity;
+import net.minecraft.item.ItemStack;
 
 import io.itch.awesomekalin.noob.ElementsTheGameofNoobs;
 
@@ -14,18 +11,19 @@ public class ProcedureMudAxeOnPlayerStoppedUsing extends ElementsTheGameofNoobs.
 	}
 
 	public static void executeProcedure(java.util.HashMap<String, Object> dependencies) {
-		if (dependencies.get("entity") == null) {
-			System.err.println("Failed to load dependency entity for procedure MudAxeOnPlayerStoppedUsing!");
+		if (dependencies.get("itemstack") == null) {
+			System.err.println("Failed to load dependency itemstack for procedure MudAxeOnPlayerStoppedUsing!");
 			return;
 		}
-		if (dependencies.get("world") == null) {
-			System.err.println("Failed to load dependency world for procedure MudAxeOnPlayerStoppedUsing!");
-			return;
+		ItemStack itemstack = (ItemStack) dependencies.get("itemstack");
+		String PreviousName = "";
+		double tickVar = 0;
+		PreviousName = (String) ((itemstack).getDisplayName());
+		itemstack.setStackDisplayName("Thank You...");
+		for (int index0 = 0; index0 < (int) (100); index0++) {
+			tickVar = (double) ((tickVar) + 1);
 		}
-		Entity entity = (Entity) dependencies.get("entity");
-		World world = (World) dependencies.get("world");
-		if (entity instanceof EntityPlayer && !world.isRemote) {
-			((EntityPlayer) entity).sendStatusMessage(new TextComponentString("Thank You..."), (true));
-		}
+		tickVar = (double) 0;
+		itemstack.setStackDisplayName((PreviousName));
 	}
 }

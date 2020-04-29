@@ -1,12 +1,10 @@
 package io.itch.awesomekalin.noob.procedure;
 
 import net.minecraft.world.World;
-import net.minecraft.util.text.TextComponentString;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.item.ItemStack;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.Entity;
 import net.minecraft.command.ICommandSender;
 
@@ -27,17 +25,12 @@ public class ProcedureMudAxeMobIsHitWithTool extends ElementsTheGameofNoobs.ModE
 			System.err.println("Failed to load dependency itemstack for procedure MudAxeMobIsHitWithTool!");
 			return;
 		}
-		if (dependencies.get("world") == null) {
-			System.err.println("Failed to load dependency world for procedure MudAxeMobIsHitWithTool!");
-			return;
-		}
 		Entity entity = (Entity) dependencies.get("entity");
 		ItemStack itemstack = (ItemStack) dependencies.get("itemstack");
-		World world = (World) dependencies.get("world");
+		String PreviousName = "";
+		double Tickvar = 0;
+		PreviousName = (String) ((itemstack).getDisplayName());
 		entity.setCustomNameTag("Noobed");
-		if (entity instanceof EntityPlayer && !world.isRemote) {
-			((EntityPlayer) entity).sendStatusMessage(new TextComponentString("How DARE you fight my kind with me."), (true));
-		}
 		itemstack.setStackDisplayName("HOW DARE YOU!");
 		if (!entity.world.isRemote && entity.world.getMinecraftServer() != null) {
 			entity.world.getMinecraftServer().getCommandManager().executeCommand(new ICommandSender() {
@@ -82,5 +75,10 @@ public class ProcedureMudAxeMobIsHitWithTool extends ElementsTheGameofNoobs.ModE
 				}
 			}, "effect @p poison 5 5");
 		}
+		for (int index0 = 0; index0 < (int) (100); index0++) {
+			Tickvar = (double) ((Tickvar) + 1);
+		}
+		Tickvar = (double) 0;
+		itemstack.setStackDisplayName((PreviousName));
 	}
 }
