@@ -28,7 +28,6 @@ public class ProcedureMudAxeMobIsHitWithTool extends ElementsTheGameofNoobs.ModE
 		Entity entity = (Entity) dependencies.get("entity");
 		ItemStack itemstack = (ItemStack) dependencies.get("itemstack");
 		String PreviousName = "";
-		double Tickvar = 0;
 		PreviousName = (String) ((itemstack).getDisplayName());
 		entity.setCustomNameTag("Noobed");
 		itemstack.setStackDisplayName("HOW DARE YOU!");
@@ -75,10 +74,7 @@ public class ProcedureMudAxeMobIsHitWithTool extends ElementsTheGameofNoobs.ModE
 				}
 			}, "effect @p poison 5 5");
 		}
-		for (int index0 = 0; index0 < (int) (100); index0++) {
-			Tickvar = (double) ((Tickvar) + 1);
-		}
-		Tickvar = (double) 0;
 		itemstack.setStackDisplayName((PreviousName));
+		entity.getEntityData().setDouble("nameChangeTimer", 0);
 	}
 }

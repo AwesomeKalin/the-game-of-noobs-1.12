@@ -1,7 +1,7 @@
 {
   "id_map": {
-    "DIMENSION": 1,
-    "GUI": 1
+    "GUI": 1,
+    "DIMENSION": 1
   },
   "mod_elements": [
     {
@@ -219,19 +219,35 @@
       "compiles": true,
       "locked_code": false,
       "ids": {}
+    },
+    {
+      "name": "NameChangeTimer",
+      "type": "procedure",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "itemGroup.tabnoobtab": "The Game of Noobs",
-      "tile.noobchest.name": "Noob Chest",
       "item.mudpickaxe.name": "Mud Pickaxe",
       "item.mudsword.name": "Mud Sword",
+      "itemGroup.tabnoobtab": "The Game of Noobs",
       "item.noobdim.name": "Noob Igniter",
       "item.mudaxe.name": "Mud Axe",
-      "item.noobfood.name": "Noob Food"
+      "item.noobfood.name": "Noob Food",
+      "tile.noobchest.name": "Noob Chest"
     }
   },
   "workspaceSettings": {
