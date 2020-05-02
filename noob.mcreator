@@ -219,25 +219,22 @@
       "compiles": true,
       "locked_code": false,
       "ids": {}
-    },
-    {
-      "name": "NameChangeTimer",
-      "type": "procedure",
-      "sortid": 17,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
     }
   ],
-  "variable_elements": [],
+  "variable_elements": [
+    {
+      "name": "NameHit",
+      "type": "string",
+      "scope": "global",
+      "value": ""
+    },
+    {
+      "name": "NameThanks",
+      "type": "string",
+      "scope": "global",
+      "value": ""
+    }
+  ],
   "sound_elements": [],
   "language_map": {
     "en_us": {

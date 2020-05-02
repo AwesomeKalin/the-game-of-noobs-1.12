@@ -16,14 +16,6 @@ public class ProcedureMudAxeOnPlayerStoppedUsing extends ElementsTheGameofNoobs.
 			return;
 		}
 		ItemStack itemstack = (ItemStack) dependencies.get("itemstack");
-		String PreviousName = "";
-		double tickVar = 0;
-		PreviousName = (String) ((itemstack).getDisplayName());
 		itemstack.setStackDisplayName("Thank You...");
-		for (int index0 = 0; index0 < (int) (100); index0++) {
-			tickVar = (double) ((tickVar) + 1);
-		}
-		tickVar = (double) 0;
-		itemstack.setStackDisplayName((PreviousName));
 	}
 }

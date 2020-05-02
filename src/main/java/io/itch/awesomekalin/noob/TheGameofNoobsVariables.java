@@ -12,6 +12,8 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.client.Minecraft;
 
 public class TheGameofNoobsVariables {
+	public static String NameHit = "";
+	public static String NameThanks = "";
 	public static class MapVariables extends WorldSavedData {
 		public static final String DATA_NAME = "noob_mapvars";
 		public MapVariables() {
