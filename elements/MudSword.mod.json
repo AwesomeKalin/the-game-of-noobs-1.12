@@ -21,9 +21,6 @@
     "repairItems": [],
     "onEntityHitWith": {
       "name": "MudAxeMobIsHitWithTool"
-    },
-    "onStoppedUsing": {
-      "name": "MudAxeOnPlayerStoppedUsing"
     }
   }
 }

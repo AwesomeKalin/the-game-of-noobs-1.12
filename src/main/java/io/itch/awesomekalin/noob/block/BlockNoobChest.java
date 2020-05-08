@@ -80,7 +80,7 @@ public class BlockNoobChest extends ElementsTheGameofNoobs.ModElement {
 			dimensionCriteria = true;
 		if (!dimensionCriteria)
 			return;
-		for (int i = 0; i < 10; i++) {
+		for (int i = 0; i < 20; i++) {
 			int x = chunkX + random.nextInt(16);
 			int y = random.nextInt(256) + 0;
 			int z = chunkZ + random.nextInt(16);
@@ -93,6 +93,15 @@ public class BlockNoobChest extends ElementsTheGameofNoobs.ModElement {
 					if (blockAt.getBlock() == Blocks.GRASS.getDefaultState().getBlock())
 						blockCriteria = true;
 					require = Blocks.DIRT.getStateFromMeta(0);
+					try {
+						if ((blockAt.getBlock() == require.getBlock())
+								&& (blockAt.getBlock().getMetaFromState(blockAt) == require.getBlock().getMetaFromState(require)))
+							blockCriteria = true;
+					} catch (Exception e) {
+						if (blockAt.getBlock() == require.getBlock())
+							blockCriteria = true;
+					}
+					require = Blocks.DIRT.getStateFromMeta(1);
 					try {
 						if ((blockAt.getBlock() == require.getBlock())
 								&& (blockAt.getBlock().getMetaFromState(blockAt) == require.getBlock().getMetaFromState(require)))

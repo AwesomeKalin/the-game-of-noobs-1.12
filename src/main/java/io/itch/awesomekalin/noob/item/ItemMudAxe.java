@@ -21,7 +21,6 @@ import net.minecraft.block.Block;
 
 import java.util.Set;
 
-import io.itch.awesomekalin.noob.procedure.ProcedureMudAxeOnPlayerStoppedUsing;
 import io.itch.awesomekalin.noob.procedure.ProcedureMudAxeMobIsHitWithTool;
 import io.itch.awesomekalin.noob.creativetab.TabNoobTab;
 import io.itch.awesomekalin.noob.ElementsTheGameofNoobs;
@@ -51,19 +50,6 @@ public class ItemMudAxe extends ElementsTheGameofNoobs.ModElement {
 					ProcedureMudAxeMobIsHitWithTool.executeProcedure($_dependencies);
 				}
 				return true;
-			}
-
-			@Override
-			public void onPlayerStoppedUsing(ItemStack itemstack, World world, EntityLivingBase entity, int time) {
-				super.onPlayerStoppedUsing(itemstack, world, entity, time);
-				int x = (int) entity.posX;
-				int y = (int) entity.posY;
-				int z = (int) entity.posZ;
-				{
-					java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
-					$_dependencies.put("itemstack", itemstack);
-					ProcedureMudAxeOnPlayerStoppedUsing.executeProcedure($_dependencies);
-				}
 			}
 		}.setUnlocalizedName("mudaxe").setRegistryName("mudaxe").setCreativeTab(TabNoobTab.tab));
 	}

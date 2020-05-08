@@ -1,7 +1,7 @@
 {
   "id_map": {
-    "GUI": 1,
-    "DIMENSION": 1
+    "DIMENSION": 1,
+    "GUI": 1
   },
   "mod_elements": [
     {
@@ -149,22 +149,6 @@
       }
     },
     {
-      "name": "MudAxeOnPlayerStoppedUsing",
-      "type": "procedure",
-      "sortid": 10,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          }
-        ]
-      }
-    },
-    {
       "name": "MudAxe",
       "type": "tool",
       "sortid": 9,
@@ -253,6 +237,7 @@
     "version": "1.1",
     "description": "The mod for noobs. DO NOT USE IF YOU ARE A PRO",
     "author": "AwesomeKalin55, AwesomeFootball 123",
+    "websiteURL": "https://github.com/AwesomeKalin/the-game-of-noobs",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,
     "requiredMods": [],
@@ -260,6 +245,7 @@
     "dependants": [],
     "mcreatorDependencies": [],
     "currentGenerator": "1.12.2",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
     "modElementsPackage": "io.itch.awesomekalin.noob",
     "lockBaseModFiles": false
   },
