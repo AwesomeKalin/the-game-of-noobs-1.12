@@ -2,7 +2,6 @@
   "_fv": 6,
   "_type": "biome",
   "definition": {
-    "name": "Noob Biome",
     "groundBlock": {
       "value": "Blocks.DIRT#0"
     },

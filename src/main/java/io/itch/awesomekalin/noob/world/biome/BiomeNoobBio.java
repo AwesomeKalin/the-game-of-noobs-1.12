@@ -36,7 +36,7 @@ public class BiomeNoobBio extends ElementsTheGameofNoobs.ModElement {
 	}
 	static class BiomeGenCustom extends Biome {
 		public BiomeGenCustom() {
-			super(new Biome.BiomeProperties("Noob Biome").setRainfall(1F).setBaseHeight(0.1F).setHeightVariation(0.2F).setTemperature(0.5F));
+			super(new Biome.BiomeProperties("noobbio").setRainfall(1F).setBaseHeight(0.1F).setHeightVariation(0.2F).setTemperature(0.5F));
 			setRegistryName("noobbio");
 			topBlock = Blocks.DIRT.getStateFromMeta(0);
 			fillerBlock = Blocks.DIRT.getStateFromMeta(0);

@@ -90,8 +90,6 @@ public class BlockNoobChest extends ElementsTheGameofNoobs.ModElement {
 					IBlockState require;
 					if (blockAt.getBlock() == Blocks.STONE.getDefaultState().getBlock())
 						blockCriteria = true;
-					if (blockAt.getBlock() == Blocks.GRASS.getDefaultState().getBlock())
-						blockCriteria = true;
 					require = Blocks.DIRT.getStateFromMeta(0);
 					try {
 						if ((blockAt.getBlock() == require.getBlock())
@@ -101,15 +99,8 @@ public class BlockNoobChest extends ElementsTheGameofNoobs.ModElement {
 						if (blockAt.getBlock() == require.getBlock())
 							blockCriteria = true;
 					}
-					require = Blocks.DIRT.getStateFromMeta(1);
-					try {
-						if ((blockAt.getBlock() == require.getBlock())
-								&& (blockAt.getBlock().getMetaFromState(blockAt) == require.getBlock().getMetaFromState(require)))
-							blockCriteria = true;
-					} catch (Exception e) {
-						if (blockAt.getBlock() == require.getBlock())
-							blockCriteria = true;
-					}
+					if (blockAt.getBlock() == Blocks.GRASS.getDefaultState().getBlock())
+						blockCriteria = true;
 					return blockCriteria;
 				}
 			})).generate(world, random, new BlockPos(x, y, z));

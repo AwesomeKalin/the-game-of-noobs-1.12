@@ -89,13 +89,10 @@
         "value": "Blocks.STONE"
       },
       {
-        "value": "Blocks.GRASS"
-      },
-      {
         "value": "Blocks.DIRT#0"
       },
       {
-        "value": "Blocks.DIRT#1"
+        "value": "Blocks.GRASS"
       }
     ],
     "frequencyPerChunks": 20,
