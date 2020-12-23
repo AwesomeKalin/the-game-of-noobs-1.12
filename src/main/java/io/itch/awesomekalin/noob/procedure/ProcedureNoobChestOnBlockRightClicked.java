@@ -4,17 +4,19 @@ import net.minecraft.world.World;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.Entity;
 
-import io.itch.awesomekalin.noob.gui.GuiNoobChestGUI;
-import io.itch.awesomekalin.noob.TheGameofNoobs;
-import io.itch.awesomekalin.noob.ElementsTheGameofNoobs;
+import java.util.Map;
 
-@ElementsTheGameofNoobs.ModElement.Tag
-public class ProcedureNoobChestOnBlockRightClicked extends ElementsTheGameofNoobs.ModElement {
-	public ProcedureNoobChestOnBlockRightClicked(ElementsTheGameofNoobs instance) {
+import io.itch.awesomekalin.noob.gui.GuiNoobChestGUI;
+import io.itch.awesomekalin.noob.NoobMod;
+import io.itch.awesomekalin.noob.ElementsNoobMod;
+
+@ElementsNoobMod.ModElement.Tag
+public class ProcedureNoobChestOnBlockRightClicked extends ElementsNoobMod.ModElement {
+	public ProcedureNoobChestOnBlockRightClicked(ElementsNoobMod instance) {
 		super(instance, 3);
 	}
 
-	public static void executeProcedure(java.util.HashMap<String, Object> dependencies) {
+	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			System.err.println("Failed to load dependency entity for procedure NoobChestOnBlockRightClicked!");
 			return;
@@ -41,6 +43,6 @@ public class ProcedureNoobChestOnBlockRightClicked extends ElementsTheGameofNoob
 		int z = (int) dependencies.get("z");
 		World world = (World) dependencies.get("world");
 		if (entity instanceof EntityPlayer)
-			((EntityPlayer) entity).openGui(TheGameofNoobs.instance, GuiNoobChestGUI.GUIID, world, x, y, z);
+			((EntityPlayer) entity).openGui(NoobMod.instance, GuiNoobChestGUI.GUIID, world, x, y, z);
 	}
 }

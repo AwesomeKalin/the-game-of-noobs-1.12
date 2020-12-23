@@ -8,15 +8,17 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.entity.Entity;
 import net.minecraft.command.ICommandSender;
 
-import io.itch.awesomekalin.noob.ElementsTheGameofNoobs;
+import java.util.Map;
 
-@ElementsTheGameofNoobs.ModElement.Tag
-public class ProcedureMudAxeMobIsHitWithTool extends ElementsTheGameofNoobs.ModElement {
-	public ProcedureMudAxeMobIsHitWithTool(ElementsTheGameofNoobs instance) {
+import io.itch.awesomekalin.noob.ElementsNoobMod;
+
+@ElementsNoobMod.ModElement.Tag
+public class ProcedureMudAxeMobIsHitWithTool extends ElementsNoobMod.ModElement {
+	public ProcedureMudAxeMobIsHitWithTool(ElementsNoobMod instance) {
 		super(instance, 9);
 	}
 
-	public static void executeProcedure(java.util.HashMap<String, Object> dependencies) {
+	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			System.err.println("Failed to load dependency entity for procedure MudAxeMobIsHitWithTool!");
 			return;
@@ -28,49 +30,52 @@ public class ProcedureMudAxeMobIsHitWithTool extends ElementsTheGameofNoobs.ModE
 		Entity entity = (Entity) dependencies.get("entity");
 		ItemStack itemstack = (ItemStack) dependencies.get("itemstack");
 		entity.setCustomNameTag("Noobed");
-		itemstack.setStackDisplayName("HOW DARE YOU!");
-		if (!entity.world.isRemote && entity.world.getMinecraftServer() != null) {
-			entity.world.getMinecraftServer().getCommandManager().executeCommand(new ICommandSender() {
-				@Override
-				public String getName() {
-					return "";
-				}
+		((itemstack)).setStackDisplayName("HOW DARE YOU!");
+		{
+			Entity _ent = entity;
+			if (!_ent.world.isRemote && _ent.world.getMinecraftServer() != null) {
+				_ent.world.getMinecraftServer().getCommandManager().executeCommand(new ICommandSender() {
+					@Override
+					public String getName() {
+						return "";
+					}
 
-				@Override
-				public boolean canUseCommand(int permission, String command) {
-					return true;
-				}
+					@Override
+					public boolean canUseCommand(int permission, String command) {
+						return true;
+					}
 
-				@Override
-				public World getEntityWorld() {
-					return entity.world;
-				}
+					@Override
+					public World getEntityWorld() {
+						return _ent.world;
+					}
 
-				@Override
-				public MinecraftServer getServer() {
-					return entity.world.getMinecraftServer();
-				}
+					@Override
+					public MinecraftServer getServer() {
+						return _ent.world.getMinecraftServer();
+					}
 
-				@Override
-				public boolean sendCommandFeedback() {
-					return false;
-				}
+					@Override
+					public boolean sendCommandFeedback() {
+						return false;
+					}
 
-				@Override
-				public BlockPos getPosition() {
-					return entity.getPosition();
-				}
+					@Override
+					public BlockPos getPosition() {
+						return _ent.getPosition();
+					}
 
-				@Override
-				public Vec3d getPositionVector() {
-					return new Vec3d(entity.posX, entity.posY, entity.posZ);
-				}
+					@Override
+					public Vec3d getPositionVector() {
+						return new Vec3d(_ent.posX, _ent.posY, _ent.posZ);
+					}
 
-				@Override
-				public Entity getCommandSenderEntity() {
-					return entity;
-				}
-			}, "effect @p poison 5 5");
+					@Override
+					public Entity getCommandSenderEntity() {
+						return _ent;
+					}
+				}, "effect @p poison 5 5");
+			}
 		}
 	}
 }

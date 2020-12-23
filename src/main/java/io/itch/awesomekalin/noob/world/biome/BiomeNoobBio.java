@@ -1,6 +1,8 @@
 
 package io.itch.awesomekalin.noob.world.biome;
 
+import net.minecraftforge.fml.relauncher.SideOnly;
+import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 
@@ -16,13 +18,13 @@ import net.minecraft.block.Block;
 
 import java.util.Random;
 
-import io.itch.awesomekalin.noob.ElementsTheGameofNoobs;
+import io.itch.awesomekalin.noob.ElementsNoobMod;
 
-@ElementsTheGameofNoobs.ModElement.Tag
-public class BiomeNoobBio extends ElementsTheGameofNoobs.ModElement {
+@ElementsNoobMod.ModElement.Tag
+public class BiomeNoobBio extends ElementsNoobMod.ModElement {
 	@GameRegistry.ObjectHolder("noob:noobbio")
 	public static final BiomeGenCustom biome = null;
-	public BiomeNoobBio(ElementsTheGameofNoobs instance) {
+	public BiomeNoobBio(ElementsNoobMod instance) {
 		super(instance, 5);
 	}
 
@@ -36,15 +38,14 @@ public class BiomeNoobBio extends ElementsTheGameofNoobs.ModElement {
 	}
 	static class BiomeGenCustom extends Biome {
 		public BiomeGenCustom() {
-			super(new Biome.BiomeProperties("noobbio").setRainfall(1F).setBaseHeight(0.1F).setHeightVariation(0.2F).setTemperature(0.5F));
+			super(new Biome.BiomeProperties("Noob Bio").setRainfall(1F).setBaseHeight(0.1F).setWaterColor(-14329397).setHeightVariation(0.2F)
+					.setTemperature(0.5F));
 			setRegistryName("noobbio");
 			topBlock = Blocks.DIRT.getStateFromMeta(0);
 			fillerBlock = Blocks.DIRT.getStateFromMeta(0);
-			decorator.generateFalls = false;
 			decorator.treesPerChunk = 4;
 			decorator.flowersPerChunk = 1;
 			decorator.grassPerChunk = 1;
-			decorator.deadBushPerChunk = 0;
 			decorator.mushroomsPerChunk = 0;
 			decorator.bigMushroomsPerChunk = 0;
 			decorator.reedsPerChunk = 0;
@@ -55,6 +56,24 @@ public class BiomeNoobBio extends ElementsTheGameofNoobs.ModElement {
 			this.spawnableCreatureList.clear();
 			this.spawnableWaterCreatureList.clear();
 			this.spawnableCaveCreatureList.clear();
+		}
+
+		@SideOnly(Side.CLIENT)
+		@Override
+		public int getGrassColorAtPos(BlockPos pos) {
+			return -13261999;
+		}
+
+		@SideOnly(Side.CLIENT)
+		@Override
+		public int getFoliageColorAtPos(BlockPos pos) {
+			return -13261999;
+		}
+
+		@SideOnly(Side.CLIENT)
+		@Override
+		public int getSkyColorByTemp(float currentTemperature) {
+			return -5916161;
 		}
 
 		@Override

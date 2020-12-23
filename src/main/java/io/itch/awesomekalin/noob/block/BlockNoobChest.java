@@ -42,17 +42,19 @@ import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.Block;
 
 import java.util.Random;
+import java.util.Map;
+import java.util.HashMap;
 
 import io.itch.awesomekalin.noob.procedure.ProcedureNoobChestOnBlockRightClicked;
 import io.itch.awesomekalin.noob.gui.GuiNoobChestGUI;
 import io.itch.awesomekalin.noob.creativetab.TabNoobTab;
-import io.itch.awesomekalin.noob.ElementsTheGameofNoobs;
+import io.itch.awesomekalin.noob.ElementsNoobMod;
 
-@ElementsTheGameofNoobs.ModElement.Tag
-public class BlockNoobChest extends ElementsTheGameofNoobs.ModElement {
+@ElementsNoobMod.ModElement.Tag
+public class BlockNoobChest extends ElementsNoobMod.ModElement {
 	@GameRegistry.ObjectHolder("noob:noobchest")
 	public static final Block block = null;
-	public BlockNoobChest(ElementsTheGameofNoobs instance) {
+	public BlockNoobChest(ElementsNoobMod instance) {
 		super(instance, 1);
 	}
 
@@ -124,11 +126,6 @@ public class BlockNoobChest extends ElementsTheGameofNoobs.ModElement {
 		}
 
 		@Override
-		public boolean canSilkHarvest(World world, BlockPos pos, IBlockState state, EntityPlayer player) {
-			return false;
-		}
-
-		@Override
 		public TileEntity createNewTileEntity(World worldIn, int meta) {
 			return new TileEntityCustom();
 		}
@@ -187,7 +184,7 @@ public class BlockNoobChest extends ElementsTheGameofNoobs.ModElement {
 			int y = pos.getY();
 			int z = pos.getZ();
 			{
-				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
+				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);

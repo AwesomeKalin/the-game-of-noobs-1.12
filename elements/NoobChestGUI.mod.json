@@ -1,11 +1,14 @@
 {
-  "_fv": 6,
+  "_fv": 13,
   "_type": "gui",
   "definition": {
     "type": 1,
-    "width": 352,
-    "height": 332,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
     "renderBgLayer": true,
+    "doesPauseGame": false,
     "components": [
       {
         "type": "inputslot",
@@ -14,9 +17,11 @@
             "value": ""
           },
           "id": 0,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
           "name": "Slot #0",
-          "x": 282,
-          "y": 126
+          "x": 141,
+          "y": 63
         }
       },
       {
@@ -26,9 +31,11 @@
             "value": ""
           },
           "id": 1,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
           "name": "Slot #1",
-          "x": 513,
-          "y": 124
+          "x": 257,
+          "y": 62
         }
       },
       {
@@ -40,8 +47,8 @@
             "falpha": 0.0
           },
           "name": "Noob Chest",
-          "x": 372,
-          "y": 77
+          "x": 186,
+          "y": 39
         }
       }
     ]

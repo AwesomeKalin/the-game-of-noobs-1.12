@@ -1,11 +1,12 @@
 {
-  "_fv": 6,
+  "_fv": 13,
   "_type": "tool",
   "definition": {
     "renderType": 0,
     "texture": "pickaxe_mud",
     "customModelName": "Normal",
     "name": "Mud Pickaxe",
+    "specialInfo": [],
     "creativeTab": {
       "value": "CUSTOM:NoobTab"
     },
@@ -19,6 +20,8 @@
     "blocksAffected": [],
     "hasGlow": false,
     "repairItems": [],
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
     "onEntityHitWith": {
       "name": "MudAxeMobIsHitWithTool"
     }

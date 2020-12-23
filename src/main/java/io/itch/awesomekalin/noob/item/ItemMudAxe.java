@@ -20,16 +20,18 @@ import net.minecraft.block.material.Material;
 import net.minecraft.block.Block;
 
 import java.util.Set;
+import java.util.Map;
+import java.util.HashMap;
 
 import io.itch.awesomekalin.noob.procedure.ProcedureMudAxeMobIsHitWithTool;
 import io.itch.awesomekalin.noob.creativetab.TabNoobTab;
-import io.itch.awesomekalin.noob.ElementsTheGameofNoobs;
+import io.itch.awesomekalin.noob.ElementsNoobMod;
 
-@ElementsTheGameofNoobs.ModElement.Tag
-public class ItemMudAxe extends ElementsTheGameofNoobs.ModElement {
+@ElementsNoobMod.ModElement.Tag
+public class ItemMudAxe extends ElementsNoobMod.ModElement {
 	@GameRegistry.ObjectHolder("noob:mudaxe")
 	public static final Item block = null;
-	public ItemMudAxe(ElementsTheGameofNoobs instance) {
+	public ItemMudAxe(ElementsNoobMod instance) {
 		super(instance, 9);
 	}
 
@@ -44,7 +46,7 @@ public class ItemMudAxe extends ElementsTheGameofNoobs.ModElement {
 				int z = (int) entity.posZ;
 				World world = entity.world;
 				{
-					java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
+					Map<String, Object> $_dependencies = new HashMap<>();
 					$_dependencies.put("entity", entity);
 					$_dependencies.put("itemstack", itemstack);
 					ProcedureMudAxeMobIsHitWithTool.executeProcedure($_dependencies);

@@ -16,17 +16,18 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 
 import java.util.Set;
+import java.util.Map;
 import java.util.HashMap;
 
 import io.itch.awesomekalin.noob.procedure.ProcedureMudAxeMobIsHitWithTool;
 import io.itch.awesomekalin.noob.creativetab.TabNoobTab;
-import io.itch.awesomekalin.noob.ElementsTheGameofNoobs;
+import io.itch.awesomekalin.noob.ElementsNoobMod;
 
-@ElementsTheGameofNoobs.ModElement.Tag
-public class ItemMudPickaxe extends ElementsTheGameofNoobs.ModElement {
+@ElementsNoobMod.ModElement.Tag
+public class ItemMudPickaxe extends ElementsNoobMod.ModElement {
 	@GameRegistry.ObjectHolder("noob:mudpickaxe")
 	public static final Item block = null;
-	public ItemMudPickaxe(ElementsTheGameofNoobs instance) {
+	public ItemMudPickaxe(ElementsNoobMod instance) {
 		super(instance, 12);
 	}
 
@@ -50,7 +51,7 @@ public class ItemMudPickaxe extends ElementsTheGameofNoobs.ModElement {
 				int z = (int) entity.posZ;
 				World world = entity.world;
 				{
-					java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
+					Map<String, Object> $_dependencies = new HashMap<>();
 					$_dependencies.put("entity", entity);
 					$_dependencies.put("itemstack", itemstack);
 					ProcedureMudAxeMobIsHitWithTool.executeProcedure($_dependencies);

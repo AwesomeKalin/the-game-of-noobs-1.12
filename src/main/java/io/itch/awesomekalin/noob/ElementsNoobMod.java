@@ -47,7 +47,7 @@ import java.lang.annotation.Retention;
 
 import io.itch.awesomekalin.noob.gui.GuiNoobChestGUI;
 
-public class ElementsTheGameofNoobs implements IFuelHandler, IWorldGenerator {
+public class ElementsNoobMod implements IFuelHandler, IWorldGenerator {
 	public final List<ModElement> elements = new ArrayList<>();
 	public final List<Supplier<Block>> blocks = new ArrayList<>();
 	public final List<Supplier<Item>> items = new ArrayList<>();
@@ -55,23 +55,23 @@ public class ElementsTheGameofNoobs implements IFuelHandler, IWorldGenerator {
 	public final List<Supplier<EntityEntry>> entities = new ArrayList<>();
 	public final List<Supplier<Potion>> potions = new ArrayList<>();
 	public static Map<ResourceLocation, net.minecraft.util.SoundEvent> sounds = new HashMap<>();
-	public ElementsTheGameofNoobs() {
+	public ElementsNoobMod() {
 	}
 
 	public void preInit(FMLPreInitializationEvent event) {
 		try {
 			for (ASMDataTable.ASMData asmData : event.getAsmData().getAll(ModElement.Tag.class.getName())) {
 				Class<?> clazz = Class.forName(asmData.getClassName());
-				if (clazz.getSuperclass() == ElementsTheGameofNoobs.ModElement.class)
-					elements.add((ElementsTheGameofNoobs.ModElement) clazz.getConstructor(this.getClass()).newInstance(this));
+				if (clazz.getSuperclass() == ElementsNoobMod.ModElement.class)
+					elements.add((ElementsNoobMod.ModElement) clazz.getConstructor(this.getClass()).newInstance(this));
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		Collections.sort(elements);
-		elements.forEach(ElementsTheGameofNoobs.ModElement::initElements);
-		this.addNetworkMessage(TheGameofNoobsVariables.WorldSavedDataSyncMessageHandler.class,
-				TheGameofNoobsVariables.WorldSavedDataSyncMessage.class, Side.SERVER, Side.CLIENT);
+		elements.forEach(ElementsNoobMod.ModElement::initElements);
+		this.addNetworkMessage(NoobModVariables.WorldSavedDataSyncMessageHandler.class, NoobModVariables.WorldSavedDataSyncMessage.class, Side.SERVER,
+				Side.CLIENT);
 	}
 
 	public void registerSounds(RegistryEvent.Register<net.minecraft.util.SoundEvent> event) {
@@ -97,31 +97,28 @@ public class ElementsTheGameofNoobs implements IFuelHandler, IWorldGenerator {
 	@SubscribeEvent
 	public void onPlayerLoggedIn(net.minecraftforge.fml.common.gameevent.PlayerEvent.PlayerLoggedInEvent event) {
 		if (!event.player.world.isRemote) {
-			WorldSavedData mapdata = TheGameofNoobsVariables.MapVariables.get(event.player.world);
-			WorldSavedData worlddata = TheGameofNoobsVariables.WorldVariables.get(event.player.world);
+			WorldSavedData mapdata = NoobModVariables.MapVariables.get(event.player.world);
+			WorldSavedData worlddata = NoobModVariables.WorldVariables.get(event.player.world);
 			if (mapdata != null)
-				TheGameofNoobs.PACKET_HANDLER.sendTo(new TheGameofNoobsVariables.WorldSavedDataSyncMessage(0, mapdata),
-						(EntityPlayerMP) event.player);
+				NoobMod.PACKET_HANDLER.sendTo(new NoobModVariables.WorldSavedDataSyncMessage(0, mapdata), (EntityPlayerMP) event.player);
 			if (worlddata != null)
-				TheGameofNoobs.PACKET_HANDLER.sendTo(new TheGameofNoobsVariables.WorldSavedDataSyncMessage(1, worlddata),
-						(EntityPlayerMP) event.player);
+				NoobMod.PACKET_HANDLER.sendTo(new NoobModVariables.WorldSavedDataSyncMessage(1, worlddata), (EntityPlayerMP) event.player);
 		}
 	}
 
 	@SubscribeEvent
 	public void onPlayerChangedDimension(net.minecraftforge.fml.common.gameevent.PlayerEvent.PlayerChangedDimensionEvent event) {
 		if (!event.player.world.isRemote) {
-			WorldSavedData worlddata = TheGameofNoobsVariables.WorldVariables.get(event.player.world);
+			WorldSavedData worlddata = NoobModVariables.WorldVariables.get(event.player.world);
 			if (worlddata != null)
-				TheGameofNoobs.PACKET_HANDLER.sendTo(new TheGameofNoobsVariables.WorldSavedDataSyncMessage(1, worlddata),
-						(EntityPlayerMP) event.player);
+				NoobMod.PACKET_HANDLER.sendTo(new NoobModVariables.WorldSavedDataSyncMessage(1, worlddata), (EntityPlayerMP) event.player);
 		}
 	}
 	private int messageID = 0;
 	public <T extends IMessage, V extends IMessage> void addNetworkMessage(Class<? extends IMessageHandler<T, V>> handler, Class<T> messageClass,
 			Side... sides) {
 		for (Side side : sides)
-			TheGameofNoobs.PACKET_HANDLER.registerMessage(handler, messageClass, messageID, side);
+			NoobMod.PACKET_HANDLER.registerMessage(handler, messageClass, messageID, side);
 		messageID++;
 	}
 	public static class GuiHandler implements IGuiHandler {
@@ -166,9 +163,9 @@ public class ElementsTheGameofNoobs implements IFuelHandler, IWorldGenerator {
 		@Retention(RetentionPolicy.RUNTIME)
 		public @interface Tag {
 		}
-		protected final ElementsTheGameofNoobs elements;
+		protected final ElementsNoobMod elements;
 		protected final int sortid;
-		public ModElement(ElementsTheGameofNoobs elements, int sortid) {
+		public ModElement(ElementsNoobMod elements, int sortid) {
 			this.elements = elements;
 			this.sortid = sortid;
 		}

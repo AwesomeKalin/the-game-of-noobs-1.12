@@ -8,11 +8,11 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.creativetab.CreativeTabs;
 
 import io.itch.awesomekalin.noob.block.BlockNoobChest;
-import io.itch.awesomekalin.noob.ElementsTheGameofNoobs;
+import io.itch.awesomekalin.noob.ElementsNoobMod;
 
-@ElementsTheGameofNoobs.ModElement.Tag
-public class TabNoobTab extends ElementsTheGameofNoobs.ModElement {
-	public TabNoobTab(ElementsTheGameofNoobs instance) {
+@ElementsNoobMod.ModElement.Tag
+public class TabNoobTab extends ElementsNoobMod.ModElement {
+	public TabNoobTab(ElementsNoobMod instance) {
 		super(instance, 4);
 	}
 

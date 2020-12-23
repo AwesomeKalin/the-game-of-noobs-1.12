@@ -37,15 +37,15 @@
           },
           {
             "name": "x",
-            "type": "int"
+            "type": "number"
           },
           {
             "name": "y",
-            "type": "int"
+            "type": "number"
           },
           {
             "name": "z",
-            "type": "int"
+            "type": "number"
           },
           {
             "name": "world",
@@ -103,15 +103,15 @@
           },
           {
             "name": "x",
-            "type": "int"
+            "type": "number"
           },
           {
             "name": "y",
-            "type": "int"
+            "type": "number"
           },
           {
             "name": "z",
-            "type": "int"
+            "type": "number"
           },
           {
             "name": "world",
@@ -249,5 +249,5 @@
     "modElementsPackage": "io.itch.awesomekalin.noob",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202000214217
+  "mcreatorVersion": 202000547520
 }

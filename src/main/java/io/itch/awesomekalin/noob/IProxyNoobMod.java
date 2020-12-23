@@ -5,7 +5,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 
-public interface IProxyTheGameofNoobs {
+public interface IProxyNoobMod {
 	void preInit(FMLPreInitializationEvent event);
 
 	void init(FMLInitializationEvent event);

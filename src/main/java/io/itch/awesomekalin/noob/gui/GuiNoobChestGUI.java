@@ -30,14 +30,14 @@ import java.util.HashMap;
 
 import java.io.IOException;
 
-import io.itch.awesomekalin.noob.TheGameofNoobs;
-import io.itch.awesomekalin.noob.ElementsTheGameofNoobs;
+import io.itch.awesomekalin.noob.NoobMod;
+import io.itch.awesomekalin.noob.ElementsNoobMod;
 
-@ElementsTheGameofNoobs.ModElement.Tag
-public class GuiNoobChestGUI extends ElementsTheGameofNoobs.ModElement {
+@ElementsNoobMod.ModElement.Tag
+public class GuiNoobChestGUI extends ElementsNoobMod.ModElement {
 	public static int GUIID = 1;
 	public static HashMap guistate = new HashMap();
-	public GuiNoobChestGUI(ElementsTheGameofNoobs instance) {
+	public GuiNoobChestGUI(ElementsNoobMod instance) {
 		super(instance, 2);
 	}
 
@@ -62,7 +62,7 @@ public class GuiNoobChestGUI extends ElementsTheGameofNoobs.ModElement {
 			TileEntity ent = world.getTileEntity(new BlockPos(x, y, z));
 			if (ent instanceof IInventory)
 				this.internal = (IInventory) ent;
-			this.customSlots.put(0, this.addSlotToContainer(new Slot(internal, 0, 17, 27) {
+			this.customSlots.put(0, this.addSlotToContainer(new Slot(internal, 0, 16, 27) {
 			}));
 			this.customSlots.put(1, this.addSlotToContainer(new Slot(internal, 1, 132, 26) {
 			}));
@@ -121,89 +121,7 @@ public class GuiNoobChestGUI extends ElementsTheGameofNoobs.ModElement {
 			return itemstack;
 		}
 
-		@Override /**
-					 * Merges provided ItemStack with the first avaliable one in the
-					 * container/player inventor between minIndex (included) and maxIndex
-					 * (excluded). Args : stack, minIndex, maxIndex, negativDirection. /!\ the
-					 * Container implementation do not check if the item is valid for the slot
-					 */
-		protected boolean mergeItemStack(ItemStack stack, int startIndex, int endIndex, boolean reverseDirection) {
-			boolean flag = false;
-			int i = startIndex;
-			if (reverseDirection) {
-				i = endIndex - 1;
-			}
-			if (stack.isStackable()) {
-				while (!stack.isEmpty()) {
-					if (reverseDirection) {
-						if (i < startIndex) {
-							break;
-						}
-					} else if (i >= endIndex) {
-						break;
-					}
-					Slot slot = this.inventorySlots.get(i);
-					ItemStack itemstack = slot.getStack();
-					if (slot.isItemValid(itemstack) && !itemstack.isEmpty() && itemstack.getItem() == stack.getItem()
-							&& (!stack.getHasSubtypes() || stack.getMetadata() == itemstack.getMetadata())
-							&& ItemStack.areItemStackTagsEqual(stack, itemstack)) {
-						int j = itemstack.getCount() + stack.getCount();
-						int maxSize = Math.min(slot.getSlotStackLimit(), stack.getMaxStackSize());
-						if (j <= maxSize) {
-							stack.setCount(0);
-							itemstack.setCount(j);
-							slot.putStack(itemstack);
-							flag = true;
-						} else if (itemstack.getCount() < maxSize) {
-							stack.shrink(maxSize - itemstack.getCount());
-							itemstack.setCount(maxSize);
-							slot.putStack(itemstack);
-							flag = true;
-						}
-					}
-					if (reverseDirection) {
-						--i;
-					} else {
-						++i;
-					}
-				}
-			}
-			if (!stack.isEmpty()) {
-				if (reverseDirection) {
-					i = endIndex - 1;
-				} else {
-					i = startIndex;
-				}
-				while (true) {
-					if (reverseDirection) {
-						if (i < startIndex) {
-							break;
-						}
-					} else if (i >= endIndex) {
-						break;
-					}
-					Slot slot1 = this.inventorySlots.get(i);
-					ItemStack itemstack1 = slot1.getStack();
-					if (itemstack1.isEmpty() && slot1.isItemValid(stack)) {
-						if (stack.getCount() > slot1.getSlotStackLimit()) {
-							slot1.putStack(stack.splitStack(slot1.getSlotStackLimit()));
-						} else {
-							slot1.putStack(stack.splitStack(stack.getCount()));
-						}
-						slot1.onSlotChanged();
-						flag = true;
-						break;
-					}
-					if (reverseDirection) {
-						--i;
-					} else {
-						++i;
-					}
-				}
-			}
-			return flag;
-		}
-
+		@Override /* failed to load code for net.minecraft.inventory.Container */
 		@Override
 		public void onContainerClosed(EntityPlayer playerIn) {
 			super.onContainerClosed(playerIn);
@@ -214,7 +132,7 @@ public class GuiNoobChestGUI extends ElementsTheGameofNoobs.ModElement {
 
 		private void slotChanged(int slotid, int ctype, int meta) {
 			if (this.world != null && this.world.isRemote) {
-				TheGameofNoobs.PACKET_HANDLER.sendToServer(new GUISlotChangedMessage(slotid, x, y, z, ctype, meta));
+				NoobMod.PACKET_HANDLER.sendToServer(new GUISlotChangedMessage(slotid, x, y, z, ctype, meta));
 				handleSlotAction(entity, slotid, ctype, meta, x, y, z);
 			}
 		}
@@ -244,11 +162,11 @@ public class GuiNoobChestGUI extends ElementsTheGameofNoobs.ModElement {
 
 		@Override
 		protected void drawGuiContainerBackgroundLayer(float par1, int par2, int par3) {
-			GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
+			GL11.glColor4f(1, 1, 1, 1);
 			this.mc.renderEngine.bindTexture(texture);
 			int k = (this.width - this.xSize) / 2;
 			int l = (this.height - this.ySize) / 2;
-			this.drawTexturedModalRect(k, l, 0, 0, this.xSize, this.ySize);
+			this.drawModalRectWithCustomSizedTexture(k, l, 0, 0, this.xSize, this.ySize, this.xSize, this.ySize);
 			zLevel = 100.0F;
 		}
 
@@ -269,7 +187,7 @@ public class GuiNoobChestGUI extends ElementsTheGameofNoobs.ModElement {
 
 		@Override
 		protected void drawGuiContainerForegroundLayer(int par1, int par2) {
-			this.fontRenderer.drawString("Noob Chest", 61, 2, -1);
+			this.fontRenderer.drawString("Noob Chest", 60, 2, -1);
 		}
 
 		@Override
@@ -289,7 +207,7 @@ public class GuiNoobChestGUI extends ElementsTheGameofNoobs.ModElement {
 
 		@Override
 		protected void actionPerformed(GuiButton button) {
-			TheGameofNoobs.PACKET_HANDLER.sendToServer(new GUIButtonPressedMessage(button.id, x, y, z));
+			NoobMod.PACKET_HANDLER.sendToServer(new GUIButtonPressedMessage(button.id, x, y, z));
 			handleButtonAction(entity, button.id, x, y, z);
 		}
 

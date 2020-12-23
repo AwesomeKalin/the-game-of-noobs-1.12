@@ -15,15 +15,18 @@ import net.minecraft.item.EnumAction;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 
+import java.util.Map;
+import java.util.HashMap;
+
 import io.itch.awesomekalin.noob.procedure.ProcedureNoobFoodFoodEaten;
 import io.itch.awesomekalin.noob.creativetab.TabNoobTab;
-import io.itch.awesomekalin.noob.ElementsTheGameofNoobs;
+import io.itch.awesomekalin.noob.ElementsNoobMod;
 
-@ElementsTheGameofNoobs.ModElement.Tag
-public class ItemNoobFood extends ElementsTheGameofNoobs.ModElement {
+@ElementsNoobMod.ModElement.Tag
+public class ItemNoobFood extends ElementsNoobMod.ModElement {
 	@GameRegistry.ObjectHolder("noob:noobfood")
 	public static final Item block = null;
-	public ItemNoobFood(ElementsTheGameofNoobs instance) {
+	public ItemNoobFood(ElementsNoobMod instance) {
 		super(instance, 8);
 	}
 
@@ -58,7 +61,7 @@ public class ItemNoobFood extends ElementsTheGameofNoobs.ModElement {
 			int y = (int) entity.posY;
 			int z = (int) entity.posZ;
 			{
-				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
+				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
