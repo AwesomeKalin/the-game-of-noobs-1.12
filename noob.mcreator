@@ -517,7 +517,7 @@
   "workspaceSettings": {
     "modid": "noob",
     "modName": "The Game of Noobs",
-    "version": "1.1",
+    "version": "1.2",
     "description": "The mod for noobs. DO NOT USE IF YOU ARE A PRO",
     "author": "AwesomeKalin55, AwesomeFootball 123",
     "websiteURL": "https://github.com/AwesomeKalin/the-game-of-noobs",
@@ -527,7 +527,7 @@
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [],
-    "currentGenerator": "1.12.2",
+    "currentGenerator": "forge-1.12.2",
     "credits": "Created using mod maker MCreator - https://mcreator.net/about",
     "modElementsPackage": "io.itch.awesomekalin.noob",
     "lockBaseModFiles": false
