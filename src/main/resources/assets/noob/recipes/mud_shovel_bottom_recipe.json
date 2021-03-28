@@ -2,24 +2,24 @@
   "group": "noob",
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "012",
-    " 4 ",
+    " 1 ",
+    "345",
     " 7 "
   ],
   "key": {
-    "0": {
-      "item": "minecraft:dirt",
-      "data": 32767
-    },
     "1": {
       "item": "minecraft:dirt",
       "data": 32767
     },
-    "2": {
+    "3": {
       "item": "minecraft:dirt",
       "data": 32767
     },
     "4": {
+      "item": "minecraft:dirt",
+      "data": 32767
+    },
+    "5": {
       "item": "minecraft:dirt",
       "data": 32767
     },

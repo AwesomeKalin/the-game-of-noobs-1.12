@@ -10,15 +10,6 @@
     "recipeShapeless": false,
     "recipeSlots": [
       {
-        "value": "Blocks.DIRT"
-      },
-      {
-        "value": "Blocks.DIRT"
-      },
-      {
-        "value": "Blocks.DIRT"
-      },
-      {
         "value": ""
       },
       {
@@ -26,6 +17,15 @@
       },
       {
         "value": ""
+      },
+      {
+        "value": "Blocks.DIRT"
+      },
+      {
+        "value": "Blocks.DIRT"
+      },
+      {
+        "value": "Blocks.DIRT"
       },
       {
         "value": ""
