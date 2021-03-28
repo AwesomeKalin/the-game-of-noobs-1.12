@@ -203,6 +203,273 @@
       "compiles": true,
       "locked_code": false,
       "ids": {}
+    },
+    {
+      "name": "NoobDust",
+      "type": "item",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "noob_dust"
+    },
+    {
+      "name": "NoobOre",
+      "type": "block",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "noob_ore"
+    },
+    {
+      "name": "NoobBlock",
+      "type": "block",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "noob_block"
+    },
+    {
+      "name": "NoobOreBlockRecipe",
+      "type": "recipe",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "noob_ore_block_recipe"
+    },
+    {
+      "name": "NoobBlockOreRecipe",
+      "type": "recipe",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "noob_block_ore_recipe"
+    },
+    {
+      "name": "NoobOreSmelting",
+      "type": "recipe",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "noob_ore_smelting"
+    },
+    {
+      "name": "NoobPickaxe",
+      "type": "tool",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "noob_pickaxe"
+    },
+    {
+      "name": "NoobAxe",
+      "type": "tool",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "noob_axe"
+    },
+    {
+      "name": "NoobSword",
+      "type": "tool",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "noob_sword"
+    },
+    {
+      "name": "NoobShovel",
+      "type": "tool",
+      "sortid": 26,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "noob_shovel"
+    },
+    {
+      "name": "NoobHoe",
+      "type": "tool",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "noob_hoe"
+    },
+    {
+      "name": "NoobPickaxeRecipe",
+      "type": "recipe",
+      "sortid": 28,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "noob_pickaxe_recipe"
+    },
+    {
+      "name": "NoobAxeRecipe",
+      "type": "recipe",
+      "sortid": 29,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "noob_axe_recipe"
+    },
+    {
+      "name": "NoobSwordRecipe",
+      "type": "recipe",
+      "sortid": 30,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "noob_sword_recipe"
+    },
+    {
+      "name": "NoobShovelRecipe",
+      "type": "recipe",
+      "sortid": 31,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "noob_shovel_recipe"
+    },
+    {
+      "name": "NoobHoeRecipe",
+      "type": "recipe",
+      "sortid": 32,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "noob_hoe_recipe"
+    },
+    {
+      "name": "NoobArmor",
+      "type": "armor",
+      "sortid": 33,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "noob_armor",
+      "metadata": {
+        "eh": true,
+        "el": true,
+        "eb": true,
+        "ec": true
+      }
+    },
+    {
+      "name": "NoobArmorHelmetRecipe",
+      "type": "recipe",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "noob_armor_helmet_recipe"
+    },
+    {
+      "name": "NoobArmorBodyRecipe",
+      "type": "recipe",
+      "sortid": 35,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "noob_armor_body_recipe"
+    },
+    {
+      "name": "NoobArmorLeggingsRecipe",
+      "type": "recipe",
+      "sortid": 36,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "noob_armor_leggings_recipe"
+    },
+    {
+      "name": "NoobArmorBootsRecipe",
+      "type": "recipe",
+      "sortid": 37,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "noob_armor_boots_recipe"
+    },
+    {
+      "name": "MudShovel",
+      "type": "tool",
+      "sortid": 38,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "mud_shovel"
+    },
+    {
+      "name": "MudHoe",
+      "type": "tool",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "mud_hoe"
+    },
+    {
+      "name": "MudShovelTop",
+      "type": "item",
+      "sortid": 40,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "mud_shovel_top"
+    },
+    {
+      "name": "MudShovelTopRecipe",
+      "type": "recipe",
+      "sortid": 41,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "mud_shovel_top_recipe"
+    },
+    {
+      "name": "MudShovelBottom",
+      "type": "item",
+      "sortid": 42,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "mud_shovel_bottom"
+    },
+    {
+      "name": "MudShovelBottomRecipe",
+      "type": "recipe",
+      "sortid": 43,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "mud_shovel_bottom_recipe"
+    },
+    {
+      "name": "MudShovelRecipe",
+      "type": "recipe",
+      "sortid": 40,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "mud_shovel_recipe"
+    },
+    {
+      "name": "MudHoeRecipe",
+      "type": "recipe",
+      "sortid": 44,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "mud_hoe_recipe"
     }
   ],
   "variable_elements": [
@@ -222,13 +489,29 @@
   "sound_elements": [],
   "language_map": {
     "en_us": {
+      "item.noob_shovel.name": "Noob Shovel",
+      "itemGroup.tabnoobtab": "The Game of Noobs",
+      "item.noob_axe.name": "Noob Axe",
+      "item.noob_sword.name": "Noob Sword",
+      "item.noob_hoe.name": "Noob Hoe",
+      "item.mud_hoe.name": "Mud Hoe",
+      "tile.noobchest.name": "Noob Chest",
+      "item.noob_dust.name": "Noob",
+      "item.mud_shovel.name": "Mud Shovel",
+      "tile.noob_block.name": "Block of Noob",
+      "item.noob_armorlegs.name": "Noob Leggings",
       "item.mudpickaxe.name": "Mud Pickaxe",
       "item.mudsword.name": "Mud Sword",
-      "itemGroup.tabnoobtab": "The Game of Noobs",
+      "item.mud_shovel_top.name": "Mud Shovel Top",
+      "item.mud_shovel_bottom.name": "Mud Shovel Bottom",
+      "item.noob_armorhelmet.name": "Noob Helmet",
       "item.noobdim.name": "Noob Igniter",
+      "item.noob_pickaxe.name": "Noob Pickaxe",
       "item.mudaxe.name": "Mud Axe",
       "item.noobfood.name": "Noob Food",
-      "tile.noobchest.name": "Noob Chest"
+      "tile.noob_ore.name": "Noob Ore",
+      "item.noob_armorboots.name": "Noob Boots",
+      "item.noob_armorbody.name": "Noob Chestplate"
     }
   },
   "workspaceSettings": {
