@@ -45,7 +45,7 @@ import java.util.function.Supplier;
 @Mod(modid = NoobMod.MODID, version = NoobMod.VERSION)
 public class NoobMod {
 	public static final String MODID = "noob";
-	public static final String VERSION = "1.2";
+	public static final String VERSION = "1.3";
 	public static final SimpleNetworkWrapper PACKET_HANDLER = NetworkRegistry.INSTANCE.newSimpleChannel("noob:a");
 	@SidedProxy(clientSide = "io.itch.awesomekalin.noob.ClientProxyNoobMod", serverSide = "io.itch.awesomekalin.noob.ServerProxyNoobMod")
 	public static IProxyNoobMod proxy;
