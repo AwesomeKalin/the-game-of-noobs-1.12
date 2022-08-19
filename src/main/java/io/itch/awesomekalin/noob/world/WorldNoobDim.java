@@ -519,12 +519,7 @@ public class WorldNoobDim extends ElementsNoobMod.ModElement {
 			}
 		}
 
-		@Override /**
-					 * Called when a neighboring block was changed and marks that this state should
-					 * perform any checks during a neighbor change. Cases may include when redstone
-					 * power is updated, cactus blocks popping off due to a neighboring solid block,
-					 * etc.
-					 */
+		@Override
 		public void neighborChanged(IBlockState state, World worldIn, BlockPos pos, Block blockIn, BlockPos fromPos) {
 			EnumFacing.Axis enumfacing$axis = (EnumFacing.Axis) state.getValue(AXIS);
 			if (enumfacing$axis == EnumFacing.Axis.X) {
@@ -997,16 +992,6 @@ public class WorldNoobDim extends ElementsNoobMod.ModElement {
 					generateBiomeTerrain(this.world, this.random, primer, x * 16 + i, z * 16 + j, this.depthbuff[j + i * 16], biomesIn[j + i * 16]);
 		}
 
-		/**
-		 * Given x, z coordinates, we count down all the y positions starting at 255 and
-		 * working our way down. When we hit a non-air block, we replace it with
-		 * biome.topBlock (default grass, descendants may set otherwise), and then a
-		 * relatively shallow layer of blocks of type biome.fillerBlock (default dirt).
-		 * A random set of blocks below y == 5 (but always including y == 0) is replaced
-		 * with bedrock. If we don't hit non-air until somewhat below sea level, we top
-		 * with gravel and fill down with stone. If biome.fillerBlock is red sand, we
-		 * replace some of that with red sandstone.
-		 */
 		public final void generateBiomeTerrain(World worldIn, Random rand, ChunkPrimer chunkPrimerIn, int x, int z, double noiseVal, Biome biome) {
 			int i = SEALEVEL;
 			IBlockState iblockstate = biome.topBlock;
@@ -1135,9 +1120,7 @@ public class WorldNoobDim extends ElementsNoobMod.ModElement {
 			return this.getBiomes(oldBiomeList, x, z, width, depth, true);
 		}
 
-		@Override /**
-					 * Returns an array of biomes for the location input.
-					 */
+		@Override
 		public Biome[] getBiomesForGeneration(Biome[] biomes, int x, int z, int width, int height) {
 			IntCache.resetIntCache();
 			if (biomes == null || biomes.length < width * height) {
@@ -1161,9 +1144,7 @@ public class WorldNoobDim extends ElementsNoobMod.ModElement {
 			}
 		}
 
-		@Override /**
-					 * Gets a list of biomes for the specified blocks.
-					 */
+		@Override
 		public Biome[] getBiomes(@Nullable Biome[] listToReuse, int x, int z, int width, int length, boolean cacheFlag) {
 			IntCache.resetIntCache();
 			if (listToReuse == null || listToReuse.length < width * length) {
@@ -1182,9 +1163,7 @@ public class WorldNoobDim extends ElementsNoobMod.ModElement {
 			}
 		}
 
-		@Override /**
-					 * checks given Chunk's Biomes against List of allowed ones
-					 */
+		@Override
 		public boolean areBiomesViable(int x, int z, int radius, List<Biome> allowed) {
 			IntCache.resetIntCache();
 			int i = x - radius >> 2;

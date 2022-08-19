@@ -3,21 +3,21 @@
   "_type": "armor",
   "definition": {
     "enableHelmet": true,
-    "textureHelmet": "noob_head",
+    "textureHelmet": "dirtarmour_head",
     "enableBody": true,
-    "textureBody": "noob_body",
+    "textureBody": "dirtarmour_body",
     "enableLeggings": true,
-    "textureLeggings": "noob_leggings",
+    "textureLeggings": "dirtarmour_leggings",
     "enableBoots": true,
-    "textureBoots": "noob_boots",
+    "textureBoots": "dirtarmour_boots",
     "creativeTab": {
-      "value": "CUSTOM:NoobTab"
+      "value": "COMBAT"
     },
-    "armorTextureFile": "noob",
-    "helmetName": "Noob Helmet",
-    "bodyName": "Noob Chestplate",
-    "leggingsName": "Noob Leggings",
-    "bootsName": "Noob Boots",
+    "armorTextureFile": "dirtarmour",
+    "helmetName": "DirtArmour Helmet",
+    "bodyName": "DirtArmour Chestplate",
+    "leggingsName": "DirtArmour Leggings",
+    "bootsName": "DirtArmour Boots",
     "helmetSpecialInfo": [],
     "bodySpecialInfo": [],
     "leggingsSpecialInfo": [],
@@ -38,12 +38,12 @@
     "bootsModelPartL": "Boots L",
     "bootsModelPartR": "Boots R",
     "bootsModelTexture": "From armor",
-    "maxDamage": 5,
-    "damageValueHelmet": 1,
-    "damageValueBody": 2,
-    "damageValueLeggings": 2,
-    "damageValueBoots": 1,
-    "enchantability": 3,
+    "maxDamage": 2,
+    "damageValueHelmet": 0,
+    "damageValueBody": 1,
+    "damageValueLeggings": 1,
+    "damageValueBoots": 0,
+    "enchantability": 1,
     "toughness": 0.0,
     "knockbackResistance": 0.0,
     "equipSound": {
@@ -51,7 +51,7 @@
     },
     "repairItems": [
       {
-        "value": "CUSTOM:NoobDust"
+        "value": "Blocks.DIRT#0"
       }
     ]
   }

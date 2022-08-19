@@ -10,19 +10,7 @@
     "recipeShapeless": false,
     "recipeSlots": [
       {
-        "value": "Blocks.DIRT"
-      },
-      {
-        "value": "Blocks.DIRT"
-      },
-      {
-        "value": "Blocks.DIRT"
-      },
-      {
         "value": ""
-      },
-      {
-        "value": "Blocks.DIRT"
       },
       {
         "value": ""
@@ -31,16 +19,28 @@
         "value": ""
       },
       {
-        "value": "Blocks.DIRT"
+        "value": "Blocks.DIRT#0"
       },
       {
         "value": ""
+      },
+      {
+        "value": "Blocks.DIRT#0"
+      },
+      {
+        "value": "Blocks.DIRT#0"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "Blocks.DIRT#0"
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:MudShovelTop"
+      "value": "CUSTOM:DirtArmourArmor.boots"
     },
-    "name": "mud_shovel_top_recipe",
+    "name": "dirt_armour_armor_boots_recipe",
     "namespace": "mod"
   }
 }

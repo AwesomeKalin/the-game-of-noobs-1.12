@@ -145,6 +145,40 @@ public class BiomeNoobBio extends ElementsNoobMod.ModElement {
 							if (state.getBlock().isAir(state, world, genhPos) || state.getBlock() == Blocks.DIRT.getStateFromMeta(0).getBlock()
 									|| state.getBlock() == Blocks.DIRT.getStateFromMeta(0).getBlock()) {
 								this.setBlockAndNotifyAdequately(world, position.up(genh), Blocks.DIRT.getStateFromMeta(0));
+								if (genh > 0) {
+									if (rand.nextInt(3) > 0 && world.isAirBlock(position.add(-1, genh, 0)))
+										this.setBlockAndNotifyAdequately(world, position.add(-1, genh, 0), Blocks.DIRT.getStateFromMeta(0));
+									if (rand.nextInt(3) > 0 && world.isAirBlock(position.add(1, genh, 0)))
+										this.setBlockAndNotifyAdequately(world, position.add(1, genh, 0), Blocks.DIRT.getStateFromMeta(0));
+									if (rand.nextInt(3) > 0 && world.isAirBlock(position.add(0, genh, -1)))
+										this.setBlockAndNotifyAdequately(world, position.add(0, genh, -1), Blocks.DIRT.getStateFromMeta(0));
+									if (rand.nextInt(3) > 0 && world.isAirBlock(position.add(0, genh, 1)))
+										this.setBlockAndNotifyAdequately(world, position.add(0, genh, 1), Blocks.DIRT.getStateFromMeta(0));
+								}
+							}
+						}
+						for (int genh = position.getY() - 3 + height; genh <= position.getY() + height; genh++) {
+							int k4 = (int) (1 - (genh - (position.getY() + height)) * 0.5);
+							for (int genx = position.getX() - k4; genx <= position.getX() + k4; genx++) {
+								for (int genz = position.getZ() - k4; genz <= position.getZ() + k4; genz++) {
+									BlockPos bpos = new BlockPos(genx, genh, genz);
+									state = world.getBlockState(bpos);
+									if (state.getBlock().isLeaves(state, world, bpos)
+											|| state.getBlock() == Blocks.DIRT.getStateFromMeta(0).getBlock()) {
+										BlockPos blockpos1 = bpos.south();
+										BlockPos blockpos2 = bpos.west();
+										BlockPos blockpos3 = bpos.east();
+										BlockPos blockpos4 = bpos.north();
+										if (rand.nextInt(4) == 0 && world.isAirBlock(blockpos2))
+											this.addVines(world, blockpos2);
+										if (rand.nextInt(4) == 0 && world.isAirBlock(blockpos3))
+											this.addVines(world, blockpos3);
+										if (rand.nextInt(4) == 0 && world.isAirBlock(blockpos4))
+											this.addVines(world, blockpos4);
+										if (rand.nextInt(4) == 0 && world.isAirBlock(blockpos1))
+											this.addVines(world, blockpos1);
+									}
+								}
 							}
 						}
 						if (rand.nextInt(4) == 0 && height > 5) {
