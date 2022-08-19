@@ -12,9 +12,9 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.Item;
 import net.minecraft.inventory.EntityEquipmentSlot;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 
+import io.itch.awesomekalin.noob.creativetab.TabNoobTab;
 import io.itch.awesomekalin.noob.ElementsNoobMod;
 
 @ElementsNoobMod.ModElement.Tag
@@ -36,13 +36,13 @@ public class ItemDirtArmourArmor extends ElementsNoobMod.ModElement {
 		ItemArmor.ArmorMaterial enuma = EnumHelper.addArmorMaterial("DIRT_ARMOUR_ARMOR", "noob:dirtarmour", 2, new int[]{0, 1, 1, 0}, 1,
 				(net.minecraft.util.SoundEvent) net.minecraft.util.SoundEvent.REGISTRY.getObject(new ResourceLocation("")), 0f);
 		elements.items.add(() -> new ItemArmor(enuma, 0, EntityEquipmentSlot.HEAD).setUnlocalizedName("dirt_armour_armorhelmet")
-				.setRegistryName("dirt_armour_armorhelmet").setCreativeTab(CreativeTabs.COMBAT));
+				.setRegistryName("dirt_armour_armorhelmet").setCreativeTab(TabNoobTab.tab));
 		elements.items.add(() -> new ItemArmor(enuma, 0, EntityEquipmentSlot.CHEST).setUnlocalizedName("dirt_armour_armorbody")
-				.setRegistryName("dirt_armour_armorbody").setCreativeTab(CreativeTabs.COMBAT));
+				.setRegistryName("dirt_armour_armorbody").setCreativeTab(TabNoobTab.tab));
 		elements.items.add(() -> new ItemArmor(enuma, 0, EntityEquipmentSlot.LEGS).setUnlocalizedName("dirt_armour_armorlegs")
-				.setRegistryName("dirt_armour_armorlegs").setCreativeTab(CreativeTabs.COMBAT));
+				.setRegistryName("dirt_armour_armorlegs").setCreativeTab(TabNoobTab.tab));
 		elements.items.add(() -> new ItemArmor(enuma, 0, EntityEquipmentSlot.FEET).setUnlocalizedName("dirt_armour_armorboots")
-				.setRegistryName("dirt_armour_armorboots").setCreativeTab(CreativeTabs.COMBAT));
+				.setRegistryName("dirt_armour_armorboots").setCreativeTab(TabNoobTab.tab));
 	}
 
 	@SideOnly(Side.CLIENT)

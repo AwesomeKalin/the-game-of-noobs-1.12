@@ -12,6 +12,7 @@ import net.minecraft.entity.Entity;
 
 import java.util.Map;
 
+import io.itch.awesomekalin.noob.NoobModVariables;
 import io.itch.awesomekalin.noob.ElementsNoobMod;
 
 @ElementsNoobMod.ModElement.Tag
@@ -20,20 +21,24 @@ public class ProcedureSwitchOutOfCreative extends ElementsNoobMod.ModElement {
 		super(instance, 53);
 	}
 
-	public static void executeProcedure(Map<String, Object> dependencies){
-		if(dependencies.get("entity")==null){
+	public static void executeProcedure(Map<String, Object> dependencies) {
+		if (dependencies.get("entity") == null) {
 			System.err.println("Failed to load dependency entity for procedure SwitchOutOfCreative!");
 			return;
 		}
-		if(dependencies.get("world")==null){
+		if (dependencies.get("world") == null) {
 			System.err.println("Failed to load dependency world for procedure SwitchOutOfCreative!");
 			return;
 		}
-            Entity entity =(Entity)dependencies.get("entity" );
-            World world =(World)dependencies.get("world" );
-		if ((==(world.getWorldTime()))) {if(entity instanceof EntityPlayer)
-	((EntityPlayer)entity).setGameType(GameType.SURVIVAL);
-}
+		Entity entity = (Entity) dependencies.get("entity");
+		World world = (World) dependencies.get("world");
+		if ((((NoobModVariables.WorldVariables.get(world).CreativeTimer) <= (world.getWorldTime()))
+				&& ((NoobModVariables.WorldVariables.get(world).ActivatedGauntlet) == (true)))) {
+			if (entity instanceof EntityPlayer)
+				((EntityPlayer) entity).setGameType(GameType.SURVIVAL);
+			NoobModVariables.WorldVariables.get(world).ActivatedGauntlet = (boolean) (false);
+			NoobModVariables.WorldVariables.get(world).syncData(world);
+		}
 	}
 
 	@SubscribeEvent

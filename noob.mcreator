@@ -575,34 +575,6 @@
       "path": "~/dirt_tools"
     },
     {
-      "name": "TheNoobEntityIsHurt",
-      "type": "procedure",
-      "sortid": 50,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "the_noob_entity_is_hurt",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/entities"
-    },
-    {
-      "name": "TheNoob",
-      "type": "mob",
-      "sortid": 50,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "the_noob",
-      "path": "~/entities"
-    },
-    {
       "name": "Saliva",
       "type": "item",
       "sortid": 51,
@@ -693,8 +665,14 @@
     {
       "name": "CreativeTimer",
       "type": "number",
-      "scope": "player_persistent",
+      "scope": "world",
       "value": "0"
+    },
+    {
+      "name": "ActivatedGauntlet",
+      "type": "logic",
+      "scope": "world",
+      "value": "false"
     }
   ],
   "sound_elements": [],
@@ -748,10 +726,6 @@
       },
       {
         "name": "noob_dim",
-        "children": []
-      },
-      {
-        "name": "entities",
         "children": []
       },
       {

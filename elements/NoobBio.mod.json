@@ -104,16 +104,6 @@
       "Lakes",
       "FrozenTopLayer"
     ],
-    "spawnEntries": [
-      {
-        "entity": {
-          "value": "CUSTOM:TheNoob"
-        },
-        "minGroup": 1,
-        "maxGroup": 6,
-        "weight": 20,
-        "spawnType": "creature"
-      }
-    ]
+    "spawnEntries": []
   }
 }

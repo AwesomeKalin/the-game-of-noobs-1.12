@@ -11,12 +11,12 @@ import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemHoe;
 import net.minecraft.item.Item;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 
 import java.util.Set;
 import java.util.HashMap;
 
+import io.itch.awesomekalin.noob.creativetab.TabNoobTab;
 import io.itch.awesomekalin.noob.ElementsNoobMod;
 
 @ElementsNoobMod.ModElement.Tag
@@ -35,7 +35,7 @@ public class ItemNoobHoe extends ElementsNoobMod.ModElement {
 				ret.put("hoe", 1);
 				return ret.keySet();
 			}
-		}.setUnlocalizedName("noob_hoe").setRegistryName("noob_hoe").setCreativeTab(CreativeTabs.TOOLS));
+		}.setUnlocalizedName("noob_hoe").setRegistryName("noob_hoe").setCreativeTab(TabNoobTab.tab));
 	}
 
 	@SideOnly(Side.CLIENT)

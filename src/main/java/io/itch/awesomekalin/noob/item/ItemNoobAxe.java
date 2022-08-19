@@ -12,7 +12,6 @@ import net.minecraft.item.ItemTool;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.init.Blocks;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.block.material.Material;
@@ -20,6 +19,7 @@ import net.minecraft.block.Block;
 
 import java.util.Set;
 
+import io.itch.awesomekalin.noob.creativetab.TabNoobTab;
 import io.itch.awesomekalin.noob.ElementsNoobMod;
 
 @ElementsNoobMod.ModElement.Tag
@@ -33,7 +33,7 @@ public class ItemNoobAxe extends ElementsNoobMod.ModElement {
 	@Override
 	public void initElements() {
 		elements.items.add(() -> new ItemToolCustom() {
-		}.setUnlocalizedName("noob_axe").setRegistryName("noob_axe").setCreativeTab(CreativeTabs.TOOLS));
+		}.setUnlocalizedName("noob_axe").setRegistryName("noob_axe").setCreativeTab(TabNoobTab.tab));
 	}
 
 	@SideOnly(Side.CLIENT)

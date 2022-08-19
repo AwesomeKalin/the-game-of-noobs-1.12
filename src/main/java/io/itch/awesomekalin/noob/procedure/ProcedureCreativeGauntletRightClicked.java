@@ -7,6 +7,7 @@ import net.minecraft.entity.Entity;
 
 import java.util.Map;
 
+import io.itch.awesomekalin.noob.NoobModVariables;
 import io.itch.awesomekalin.noob.ElementsNoobMod;
 
 @ElementsNoobMod.ModElement.Tag
@@ -28,5 +29,9 @@ public class ProcedureCreativeGauntletRightClicked extends ElementsNoobMod.ModEl
 		World world = (World) dependencies.get("world");
 		if (entity instanceof EntityPlayer)
 			((EntityPlayer) entity).setGameType(GameType.CREATIVE);
+		NoobModVariables.WorldVariables.get(world).CreativeTimer = (double) ((world.getWorldTime()) + 600);
+		NoobModVariables.WorldVariables.get(world).syncData(world);
+		NoobModVariables.WorldVariables.get(world).ActivatedGauntlet = (boolean) (true);
+		NoobModVariables.WorldVariables.get(world).syncData(world);
 	}
 }

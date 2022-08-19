@@ -14,12 +14,12 @@ import net.minecraft.item.Item;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.SharedMonsterAttributes;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 
 import java.util.Set;
 import java.util.HashMap;
 
+import io.itch.awesomekalin.noob.creativetab.TabNoobTab;
 import io.itch.awesomekalin.noob.ElementsNoobMod;
 
 import com.google.common.collect.Multimap;
@@ -52,7 +52,7 @@ public class ItemNoobSword extends ElementsNoobMod.ModElement {
 				ret.put("sword", 1);
 				return ret.keySet();
 			}
-		}.setUnlocalizedName("noob_sword").setRegistryName("noob_sword").setCreativeTab(CreativeTabs.COMBAT));
+		}.setUnlocalizedName("noob_sword").setRegistryName("noob_sword").setCreativeTab(TabNoobTab.tab));
 	}
 
 	@SideOnly(Side.CLIENT)

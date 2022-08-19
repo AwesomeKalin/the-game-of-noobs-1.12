@@ -54,6 +54,8 @@ public class NoobModVariables {
 
 	public static class WorldVariables extends WorldSavedData {
 		public static final String DATA_NAME = "noob_worldvars";
+		public double CreativeTimer = 0;
+		public boolean ActivatedGauntlet = false;
 		public WorldVariables() {
 			super(DATA_NAME);
 		}
@@ -64,10 +66,14 @@ public class NoobModVariables {
 
 		@Override
 		public void readFromNBT(NBTTagCompound nbt) {
+			CreativeTimer = nbt.getDouble("CreativeTimer");
+			ActivatedGauntlet = nbt.getBoolean("ActivatedGauntlet");
 		}
 
 		@Override
 		public NBTTagCompound writeToNBT(NBTTagCompound nbt) {
+			nbt.setDouble("CreativeTimer", CreativeTimer);
+			nbt.setBoolean("ActivatedGauntlet", ActivatedGauntlet);
 			return nbt;
 		}
 
