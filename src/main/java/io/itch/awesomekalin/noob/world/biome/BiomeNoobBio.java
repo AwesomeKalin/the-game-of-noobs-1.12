@@ -56,6 +56,7 @@ public class BiomeNoobBio extends ElementsNoobMod.ModElement {
 			this.spawnableCreatureList.clear();
 			this.spawnableWaterCreatureList.clear();
 			this.spawnableCaveCreatureList.clear();
+			this.spawnableCreatureList.add(new SpawnListEntry(EntityTheNoob.EntityCustom.class, 20, 1, 6));
 		}
 
 		@SideOnly(Side.CLIENT)
