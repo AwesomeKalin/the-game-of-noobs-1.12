@@ -601,6 +601,80 @@
       "ids": {},
       "registry_name": "the_noob",
       "path": "~/entities"
+    },
+    {
+      "name": "Saliva",
+      "type": "item",
+      "sortid": 51,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "saliva",
+      "path": "~/CreativeGauntlet"
+    },
+    {
+      "name": "CreativeGauntletRightClicked",
+      "type": "procedure",
+      "sortid": 52,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "creative_gauntlet_right_clicked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/CreativeGauntlet"
+    },
+    {
+      "name": "CreativeGauntlet",
+      "type": "item",
+      "sortid": 52,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "creative_gauntlet",
+      "path": "~/CreativeGauntlet"
+    },
+    {
+      "name": "SwitchOutOfCreative",
+      "type": "procedure",
+      "sortid": 53,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "switch_out_of_creative",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/CreativeGauntlet"
+    },
+    {
+      "name": "CreativeGaunt",
+      "type": "recipe",
+      "sortid": 54,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "creative_gaunt",
+      "path": "~/CreativeGauntlet"
     }
   ],
   "variable_elements": [
@@ -615,16 +689,24 @@
       "type": "string",
       "scope": "global",
       "value": ""
+    },
+    {
+      "name": "CreativeTimer",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
     }
   ],
   "sound_elements": [],
   "language_map": {
     "en_us": {
       "itemGroup.tabnoobtab": "The Game of Noobs",
+      "item.saliva.name": "Saliva",
       "item.dirt_armour_armorboots.name": "DirtArmour Boots",
       "item.dirt_armour_armorhelmet.name": "DirtArmour Helmet",
       "tile.noob_block.name": "Block of Noob",
       "item.mudpickaxe.name": "Mud Pickaxe",
+      "item.creative_gauntlet.name": "Creative Gauntlet",
       "item.noob_armorhelmet.name": "Noob Helmet",
       "tile.noob_ore.name": "Noob Ore",
       "item.dirt_armour_armorlegs.name": "DirtArmour Leggings",
@@ -674,6 +756,10 @@
       },
       {
         "name": "food",
+        "children": []
+      },
+      {
+        "name": "CreativeGauntlet",
         "children": []
       }
     ]
