@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "variant=default": {
+      "model": "noob:dirt_slab_double"
+    }
+  }
+}

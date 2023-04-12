@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=bottom,variant=default": {
+      "model": "noob:dirt_slab"
+    },
+    "half=top,variant=default": {
+      "model": "noob:dirt_slab_top"
+    }
+  }
+}

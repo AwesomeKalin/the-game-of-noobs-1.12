@@ -1,0 +1,7 @@
+{
+  "parent": "block/fence_inventory",
+  "textures": {
+    "texture": "noob:blocks/noob_planks",
+    "particle": "noob:blocks/noob_planks"
+  }
+}

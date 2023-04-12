@@ -3,12 +3,12 @@
     "modid": "noob",
     "name": "The Game of Noobs",
     "description": "The mod for noobs. DO NOT USE IF YOU ARE A PRO",
-    "version": "1.3",
+    "version": "1.4.0",
     "credits": "Created using mod maker MCreator - https://mcreator.net/about. Noob skin from https://www.minecraftskins.com/skin/20735075/noob/",
     "logoFile": "",
     "mcversion": "1.12.2",
     "url": "https://github.com/AwesomeKalin/the-game-of-noobs",
-    "updateUrl": "",
+    "updateUrl": "https://update.awesomekalin.eu.org/noob.json",
     "authorList": [
       "AwesomeKalin55, AwesomeFootball 123"
     ],

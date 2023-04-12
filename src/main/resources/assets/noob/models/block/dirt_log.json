@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "noob:blocks/dirt_log_top",
+    "up": "noob:blocks/dirt_log_top",
+    "north": "noob:blocks/dirt_log_side",
+    "east": "noob:blocks/dirt_log_side",
+    "south": "noob:blocks/dirt_log_side",
+    "west": "noob:blocks/dirt_log_side",
+    "particle": "noob:blocks/dirt_log_top"
+  }
+}

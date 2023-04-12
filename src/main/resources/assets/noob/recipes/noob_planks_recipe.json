@@ -1,0 +1,14 @@
+{
+  "group": "noob",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "type": "forge:ore_dict",
+      "ore": "forgenoob_log"
+    }
+  ],
+  "result": {
+    "item": "noob:noob_planks",
+    "count": 4
+  }
+}
